@@ -1,0 +1,569 @@
+#pragma version 8
+intcblock 0 1 28 65536
+bytecblock 0x 0x5f 0x151f7c75
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l14
+txna ApplicationArgs 0
+pushbytes 0xd4c0fd6a // "Register_proposal(string,string,uint64,uint64,uint64)(string,string,uint64,uint64,uint64)"
+==
+bnz main_l13
+txna ApplicationArgs 0
+pushbytes 0x1d250062 // "Registred_user_per_proposal(string,uint64)(string,uint64)"
+==
+bnz main_l12
+txna ApplicationArgs 0
+pushbytes 0x7240c3cc // "update_proposal(string,string,uint64,uint64,uint64)(string,string,uint64,uint64,uint64)"
+==
+bnz main_l11
+txna ApplicationArgs 0
+pushbytes 0xf9bf3643 // "Update_Users(string,uint64)(string,uint64)"
+==
+bnz main_l10
+txna ApplicationArgs 0
+pushbytes 0xcb6b1813 // "read_proposal_store(string)(string,string,uint64,uint64,uint64)"
+==
+bnz main_l9
+txna ApplicationArgs 0
+pushbytes 0x0aaad98a // "read_user_proposal_store(string)(string,uint64)"
+==
+bnz main_l8
+err
+main_l8:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub readuserproposalstorecaster_11
+intc_1 // 1
+return
+main_l9:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub readproposalstorecaster_10
+intc_1 // 1
+return
+main_l10:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub UpdateUserscaster_9
+intc_1 // 1
+return
+main_l11:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub updateproposalcaster_8
+intc_1 // 1
+return
+main_l12:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub Registreduserperproposalcaster_7
+intc_1 // 1
+return
+main_l13:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub Registerproposalcaster_6
+intc_1 // 1
+return
+main_l14:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l16
+err
+main_l16:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+intc_1 // 1
+return
+
+// Register_proposal
+Registerproposal_0:
+proto 5 1
+bytec_0 // ""
+dup
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+frame_dig -5
+frame_bury 5
+frame_dig 5
+frame_bury 4
+intc_2 // 28
+frame_bury 2
+frame_dig 2
+frame_dig 5
+len
++
+frame_bury 3
+frame_dig 3
+intc_3 // 65536
+<
+assert
+frame_dig 2
+itob
+extract 6 0
+frame_dig -4
+frame_bury 5
+frame_dig 4
+frame_dig 5
+concat
+frame_bury 4
+frame_dig 3
+frame_bury 2
+frame_dig 2
+itob
+extract 6 0
+concat
+frame_dig -3
+itob
+concat
+frame_dig -2
+itob
+concat
+frame_dig -1
+itob
+concat
+frame_dig 4
+concat
+frame_bury 1
+frame_dig -5
+extract 2 0
+box_len
+store 1
+store 0
+load 1
+intc_0 // 0
+==
+// Proposal_ID already exists
+assert
+frame_dig -5
+extract 2 0
+box_del
+pop
+frame_dig -5
+extract 2 0
+frame_dig 1
+box_put
+frame_dig -5
+extract 2 0
+box_get
+store 3
+store 2
+load 3
+assert
+load 2
+frame_bury 0
+retsub
+
+// Registred_user_per_proposal
+Registreduserperproposal_1:
+proto 2 1
+bytec_0 // ""
+dup
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+frame_dig -2
+frame_bury 5
+frame_dig 5
+frame_bury 4
+pushint 10 // 10
+frame_bury 2
+frame_dig 2
+itob
+extract 6 0
+frame_dig -1
+itob
+concat
+frame_dig 4
+concat
+frame_bury 1
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+box_len
+store 5
+store 4
+load 5
+intc_0 // 0
+==
+// User_ID already exists
+assert
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+box_del
+pop
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+frame_dig 1
+box_put
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+box_get
+store 7
+store 6
+load 7
+assert
+load 6
+frame_bury 0
+retsub
+
+// update_proposal
+updateproposal_2:
+proto 5 1
+bytec_0 // ""
+dupn 2
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+frame_dig -5
+extract 2 0
+box_get
+store 9
+store 8
+load 9
+assert
+load 8
+frame_bury 1
+frame_dig -5
+frame_bury 6
+frame_dig 6
+frame_bury 5
+intc_2 // 28
+frame_bury 3
+frame_dig 3
+frame_dig 6
+len
++
+frame_bury 4
+frame_dig 4
+intc_3 // 65536
+<
+assert
+frame_dig 3
+itob
+extract 6 0
+frame_dig -4
+frame_bury 6
+frame_dig 5
+frame_dig 6
+concat
+frame_bury 5
+frame_dig 4
+frame_bury 3
+frame_dig 3
+itob
+extract 6 0
+concat
+frame_dig -3
+itob
+concat
+frame_dig -2
+itob
+concat
+frame_dig -1
+itob
+concat
+frame_dig 5
+concat
+frame_bury 2
+frame_dig -5
+extract 2 0
+box_del
+pop
+frame_dig -5
+extract 2 0
+frame_dig 2
+box_put
+frame_dig -5
+extract 2 0
+box_get
+store 11
+store 10
+load 11
+assert
+load 10
+frame_bury 0
+retsub
+
+// Update_Users
+UpdateUsers_3:
+proto 2 1
+bytec_0 // ""
+dupn 2
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+box_get
+store 13
+store 12
+load 13
+assert
+load 12
+frame_bury 1
+frame_dig -2
+frame_bury 6
+frame_dig 6
+frame_bury 5
+pushint 10 // 10
+frame_bury 3
+frame_dig 3
+itob
+extract 6 0
+frame_dig -1
+itob
+concat
+frame_dig 5
+concat
+frame_bury 2
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+box_del
+pop
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+frame_dig 2
+box_put
+bytec_1 // "_"
+frame_dig -2
+extract 2 0
+concat
+box_get
+store 15
+store 14
+load 15
+assert
+load 14
+frame_bury 0
+retsub
+
+// read_proposal_store
+readproposalstore_4:
+proto 1 1
+bytec_0 // ""
+frame_dig -1
+extract 2 0
+box_get
+store 17
+store 16
+load 17
+assert
+load 16
+frame_bury 0
+retsub
+
+// read_user_proposal_store
+readuserproposalstore_5:
+proto 1 1
+bytec_0 // ""
+bytec_1 // "_"
+frame_dig -1
+extract 2 0
+concat
+box_get
+store 19
+store 18
+load 19
+assert
+load 18
+frame_bury 0
+retsub
+
+// Register_proposal_caster
+Registerproposalcaster_6:
+proto 0 0
+bytec_0 // ""
+dupn 2
+intc_0 // 0
+dupn 2
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+frame_bury 2
+txna ApplicationArgs 3
+btoi
+frame_bury 3
+txna ApplicationArgs 4
+btoi
+frame_bury 4
+txna ApplicationArgs 5
+btoi
+frame_bury 5
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+frame_dig 5
+callsub Registerproposal_0
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// Registred_user_per_proposal_caster
+Registreduserperproposalcaster_7:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+frame_dig 1
+frame_dig 2
+callsub Registreduserperproposal_1
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// update_proposal_caster
+updateproposalcaster_8:
+proto 0 0
+bytec_0 // ""
+dupn 2
+intc_0 // 0
+dupn 2
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+frame_bury 2
+txna ApplicationArgs 3
+btoi
+frame_bury 3
+txna ApplicationArgs 4
+btoi
+frame_bury 4
+txna ApplicationArgs 5
+btoi
+frame_bury 5
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+frame_dig 5
+callsub updateproposal_2
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// Update_Users_caster
+UpdateUserscaster_9:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+frame_dig 1
+frame_dig 2
+callsub UpdateUsers_3
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// read_proposal_store_caster
+readproposalstorecaster_10:
+proto 0 0
+bytec_0 // ""
+dup
+txna ApplicationArgs 1
+frame_bury 1
+frame_dig 1
+callsub readproposalstore_4
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// read_user_proposal_store_caster
+readuserproposalstorecaster_11:
+proto 0 0
+bytec_0 // ""
+dup
+txna ApplicationArgs 1
+frame_bury 1
+frame_dig 1
+callsub readuserproposalstore_5
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
