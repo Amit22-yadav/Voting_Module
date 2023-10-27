@@ -1,0 +1,505 @@
+{
+    "hints": {
+        "Register_proposal(string,string,uint64,string,uint64)(string,string,uint64,string,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "Proposal_Record",
+                    "elements": [
+                        [
+                            "proposal_id",
+                            "string"
+                        ],
+                        [
+                            "proposal_name",
+                            "string"
+                        ],
+                        [
+                            "asset_count",
+                            "uint64"
+                        ],
+                        [
+                            "asset_id",
+                            "string"
+                        ],
+                        [
+                            "Amount",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "Registred_user_per_proposal(string,string,string,uint64)(string,string,string,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "User_per_proposal_record",
+                    "elements": [
+                        [
+                            "proposal_id",
+                            "string"
+                        ],
+                        [
+                            "user_id",
+                            "string"
+                        ],
+                        [
+                            "asset_id",
+                            "string"
+                        ],
+                        [
+                            "User_Token",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "Register_user_asset(string,string,uint64)(string,string,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "User_asset_store",
+                    "elements": [
+                        [
+                            "user_id",
+                            "string"
+                        ],
+                        [
+                            "asset_id",
+                            "string"
+                        ],
+                        [
+                            "User_Token",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "update_proposal(string,string,uint64,string,uint64)(string,string,uint64,string,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "Proposal_Record",
+                    "elements": [
+                        [
+                            "proposal_id",
+                            "string"
+                        ],
+                        [
+                            "proposal_name",
+                            "string"
+                        ],
+                        [
+                            "asset_count",
+                            "uint64"
+                        ],
+                        [
+                            "asset_id",
+                            "string"
+                        ],
+                        [
+                            "Amount",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "Update_Users(string,string,string,uint64)(string,string,string,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "User_per_proposal_record",
+                    "elements": [
+                        [
+                            "proposal_id",
+                            "string"
+                        ],
+                        [
+                            "user_id",
+                            "string"
+                        ],
+                        [
+                            "asset_id",
+                            "string"
+                        ],
+                        [
+                            "User_Token",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "Voting_Record(string,string,uint64,bool)(string,uint64,bool)": {
+            "structs": {
+                "output": {
+                    "name": "Response_store",
+                    "elements": [
+                        [
+                            "user_id",
+                            "string"
+                        ],
+                        [
+                            "User_Token",
+                            "uint64"
+                        ],
+                        [
+                            "user_response",
+                            "bool"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "Result(string)string": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "read_proposal_store(string)(string,string,uint64,string,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "Proposal_Record",
+                    "elements": [
+                        [
+                            "proposal_id",
+                            "string"
+                        ],
+                        [
+                            "proposal_name",
+                            "string"
+                        ],
+                        [
+                            "asset_count",
+                            "uint64"
+                        ],
+                        [
+                            "asset_id",
+                            "string"
+                        ],
+                        [
+                            "Amount",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "read_user_proposal_store(string,string)(string,string,string,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "User_per_proposal_record",
+                    "elements": [
+                        [
+                            "proposal_id",
+                            "string"
+                        ],
+                        [
+                            "user_id",
+                            "string"
+                        ],
+                        [
+                            "asset_id",
+                            "string"
+                        ],
+                        [
+                            "User_Token",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "read_user_response(string)(string,uint64,bool)": {
+            "structs": {
+                "output": {
+                    "name": "Response_store",
+                    "elements": [
+                        [
+                            "user_id",
+                            "string"
+                        ],
+                        [
+                            "User_Token",
+                            "uint64"
+                        ],
+                        [
+                            "user_response",
+                            "bool"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMSA2NTUzNiAyMgpieXRlY2Jsb2NrIDB4IDB4NWYgMHgxNTFmN2M3NSAweDRlNmY1ZjYzNmY3NTZlNzQgMHg3OTY1NzM1ZjYzNmY3NTZlNzQgMHgyMyAweDQwCnR4biBOdW1BcHBBcmdzCmludGNfMCAvLyAwCj09CmJueiBtYWluX2wyMgp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDdiNmIwYTUxIC8vICJSZWdpc3Rlcl9wcm9wb3NhbChzdHJpbmcsc3RyaW5nLHVpbnQ2NCxzdHJpbmcsdWludDY0KShzdHJpbmcsc3RyaW5nLHVpbnQ2NCxzdHJpbmcsdWludDY0KSIKPT0KYm56IG1haW5fbDIxCnR4bmEgQXBwbGljYXRpb25BcmdzIDAKcHVzaGJ5dGVzIDB4Y2FkMDY5ODggLy8gIlJlZ2lzdHJlZF91c2VyX3Blcl9wcm9wb3NhbChzdHJpbmcsc3RyaW5nLHN0cmluZyx1aW50NjQpKHN0cmluZyxzdHJpbmcsc3RyaW5nLHVpbnQ2NCkiCj09CmJueiBtYWluX2wyMAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDBlYTRlNWYxIC8vICJSZWdpc3Rlcl91c2VyX2Fzc2V0KHN0cmluZyxzdHJpbmcsdWludDY0KShzdHJpbmcsc3RyaW5nLHVpbnQ2NCkiCj09CmJueiBtYWluX2wxOQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGE3Yzg0NGMwIC8vICJ1cGRhdGVfcHJvcG9zYWwoc3RyaW5nLHN0cmluZyx1aW50NjQsc3RyaW5nLHVpbnQ2NCkoc3RyaW5nLHN0cmluZyx1aW50NjQsc3RyaW5nLHVpbnQ2NCkiCj09CmJueiBtYWluX2wxOAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGMyOThkMThlIC8vICJVcGRhdGVfVXNlcnMoc3RyaW5nLHN0cmluZyxzdHJpbmcsdWludDY0KShzdHJpbmcsc3RyaW5nLHN0cmluZyx1aW50NjQpIgo9PQpibnogbWFpbl9sMTcKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg4NmVjMjUxZCAvLyAiVm90aW5nX1JlY29yZChzdHJpbmcsc3RyaW5nLHVpbnQ2NCxib29sKShzdHJpbmcsdWludDY0LGJvb2wpIgo9PQpibnogbWFpbl9sMTYKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHhkZGFiZDE2ZiAvLyAiUmVzdWx0KHN0cmluZylzdHJpbmciCj09CmJueiBtYWluX2wxNQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDkwOTNiY2YwIC8vICJyZWFkX3Byb3Bvc2FsX3N0b3JlKHN0cmluZykoc3RyaW5nLHN0cmluZyx1aW50NjQsc3RyaW5nLHVpbnQ2NCkiCj09CmJueiBtYWluX2wxNAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDE0ZTc2NDBmIC8vICJyZWFkX3VzZXJfcHJvcG9zYWxfc3RvcmUoc3RyaW5nLHN0cmluZykoc3RyaW5nLHN0cmluZyxzdHJpbmcsdWludDY0KSIKPT0KYm56IG1haW5fbDEzCnR4bmEgQXBwbGljYXRpb25BcmdzIDAKcHVzaGJ5dGVzIDB4MjhhNWNhNzAgLy8gInJlYWRfdXNlcl9yZXNwb25zZShzdHJpbmcpKHN0cmluZyx1aW50NjQsYm9vbCkiCj09CmJueiBtYWluX2wxMgplcnIKbWFpbl9sMTI6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgcmVhZHVzZXJyZXNwb25zZWNhc3Rlcl8yMAppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMTM6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgcmVhZHVzZXJwcm9wb3NhbHN0b3JlY2FzdGVyXzE5CmludGNfMSAvLyAxCnJldHVybgptYWluX2wxNDoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiByZWFkcHJvcG9zYWxzdG9yZWNhc3Rlcl8xOAppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMTU6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgUmVzdWx0Y2FzdGVyXzE3CmludGNfMSAvLyAxCnJldHVybgptYWluX2wxNjoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiBWb3RpbmdSZWNvcmRjYXN0ZXJfMTYKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDE3Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIFVwZGF0ZVVzZXJzY2FzdGVyXzE1CmludGNfMSAvLyAxCnJldHVybgptYWluX2wxODoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiB1cGRhdGVwcm9wb3NhbGNhc3Rlcl8xNAppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMTk6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgUmVnaXN0ZXJ1c2VyYXNzZXRjYXN0ZXJfMTMKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDIwOgp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIFJlZ2lzdHJlZHVzZXJwZXJwcm9wb3NhbGNhc3Rlcl8xMgppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMjE6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgUmVnaXN0ZXJwcm9wb3NhbGNhc3Rlcl8xMQppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMjI6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KYm56IG1haW5fbDI0CmVycgptYWluX2wyNDoKdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKPT0KYXNzZXJ0CmNhbGxzdWIgY3JlYXRlXzAKaW50Y18xIC8vIDEKcmV0dXJuCgovLyBjcmVhdGUKY3JlYXRlXzA6CnByb3RvIDAgMApieXRlY18zIC8vICJOb19jb3VudCIKaW50Y18wIC8vIDAKYXBwX2dsb2JhbF9wdXQKYnl0ZWMgNCAvLyAieWVzX2NvdW50IgppbnRjXzAgLy8gMAphcHBfZ2xvYmFsX3B1dApyZXRzdWIKCi8vIFJlZ2lzdGVyX3Byb3Bvc2FsClJlZ2lzdGVycHJvcG9zYWxfMToKcHJvdG8gNSAxCmJ5dGVjXzAgLy8gIiIKZHVwCmludGNfMCAvLyAwCmR1cApieXRlY18wIC8vICIiCmR1cApmcmFtZV9kaWcgLTUKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyA1CmZyYW1lX2J1cnkgNAppbnRjXzMgLy8gMjIKZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAyCmZyYW1lX2RpZyA1CmxlbgorCmZyYW1lX2J1cnkgMwpmcmFtZV9kaWcgMwppbnRjXzIgLy8gNjU1MzYKPAphc3NlcnQKZnJhbWVfZGlnIDIKaXRvYgpleHRyYWN0IDYgMApmcmFtZV9kaWcgLTQKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyA0CmZyYW1lX2RpZyA1CmNvbmNhdApmcmFtZV9idXJ5IDQKZnJhbWVfZGlnIDMKZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAyCmZyYW1lX2RpZyA1CmxlbgorCmZyYW1lX2J1cnkgMwpmcmFtZV9kaWcgMwppbnRjXzIgLy8gNjU1MzYKPAphc3NlcnQKZnJhbWVfZGlnIDIKaXRvYgpleHRyYWN0IDYgMApjb25jYXQKZnJhbWVfZGlnIC0zCml0b2IKY29uY2F0CmZyYW1lX2RpZyAtMgpmcmFtZV9idXJ5IDUKZnJhbWVfZGlnIDQKZnJhbWVfZGlnIDUKY29uY2F0CmZyYW1lX2J1cnkgNApmcmFtZV9kaWcgMwpmcmFtZV9idXJ5IDIKZnJhbWVfZGlnIDIKaXRvYgpleHRyYWN0IDYgMApjb25jYXQKZnJhbWVfZGlnIC0xCml0b2IKY29uY2F0CmZyYW1lX2RpZyA0CmNvbmNhdApmcmFtZV9idXJ5IDEKZnJhbWVfZGlnIC01CmV4dHJhY3QgMiAwCmJveF9sZW4Kc3RvcmUgMQpzdG9yZSAwCmxvYWQgMQppbnRjXzAgLy8gMAo9PQovLyBQcm9wb3NhbF9JRCBhbHJlYWR5IGV4aXN0cwphc3NlcnQKZnJhbWVfZGlnIC01CmV4dHJhY3QgMiAwCmJveF9kZWwKcG9wCmZyYW1lX2RpZyAtNQpleHRyYWN0IDIgMApmcmFtZV9kaWcgMQpib3hfcHV0CmZyYW1lX2RpZyAtNQpleHRyYWN0IDIgMApib3hfZ2V0CnN0b3JlIDMKc3RvcmUgMgpsb2FkIDMKYXNzZXJ0CmxvYWQgMgpmcmFtZV9idXJ5IDAKcmV0c3ViCgovLyBSZWdpc3RyZWRfdXNlcl9wZXJfcHJvcG9zYWwKUmVnaXN0cmVkdXNlcnBlcnByb3Bvc2FsXzI6CnByb3RvIDQgMQpieXRlY18wIC8vICIiCmR1cAppbnRjXzAgLy8gMApkdXAKYnl0ZWNfMCAvLyAiIgpkdXAKZnJhbWVfZGlnIC00CmZyYW1lX2J1cnkgNQpmcmFtZV9kaWcgNQpmcmFtZV9idXJ5IDQKcHVzaGludCAxNCAvLyAxNApmcmFtZV9idXJ5IDIKZnJhbWVfZGlnIDIKZnJhbWVfZGlnIDUKbGVuCisKZnJhbWVfYnVyeSAzCmZyYW1lX2RpZyAzCmludGNfMiAvLyA2NTUzNgo8CmFzc2VydApmcmFtZV9kaWcgMgppdG9iCmV4dHJhY3QgNiAwCmZyYW1lX2RpZyAtMwpmcmFtZV9idXJ5IDUKZnJhbWVfZGlnIDQKZnJhbWVfZGlnIDUKY29uY2F0CmZyYW1lX2J1cnkgNApmcmFtZV9kaWcgMwpmcmFtZV9idXJ5IDIKZnJhbWVfZGlnIDIKZnJhbWVfZGlnIDUKbGVuCisKZnJhbWVfYnVyeSAzCmZyYW1lX2RpZyAzCmludGNfMiAvLyA2NTUzNgo8CmFzc2VydApmcmFtZV9kaWcgMgppdG9iCmV4dHJhY3QgNiAwCmNvbmNhdApmcmFtZV9kaWcgLTIKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyA0CmZyYW1lX2RpZyA1CmNvbmNhdApmcmFtZV9idXJ5IDQKZnJhbWVfZGlnIDMKZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAyCml0b2IKZXh0cmFjdCA2IDAKY29uY2F0CmZyYW1lX2RpZyAtMQppdG9iCmNvbmNhdApmcmFtZV9kaWcgNApjb25jYXQKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAtNApleHRyYWN0IDIgMApib3hfbGVuCnN0b3JlIDUKc3RvcmUgNApsb2FkIDUKaW50Y18wIC8vIDAKPT0KYnogUmVnaXN0cmVkdXNlcnBlcnByb3Bvc2FsXzJfbDIKYnl0ZWNfMSAvLyAiXyIKZnJhbWVfZGlnIC0zCmV4dHJhY3QgMiAwCmNvbmNhdApib3hfbGVuCnN0b3JlIDcKc3RvcmUgNgpsb2FkIDcKaW50Y18wIC8vIDAKPT0KLy8gVXNlcl9JRCBhbHJlYWR5IGV4aXN0cwphc3NlcnQKUmVnaXN0cmVkdXNlcnBlcnByb3Bvc2FsXzJfbDI6CmJ5dGVjXzEgLy8gIl8iCmZyYW1lX2RpZyAtMwpleHRyYWN0IDIgMApjb25jYXQKYm94X2RlbApwb3AKYnl0ZWNfMSAvLyAiXyIKZnJhbWVfZGlnIC0zCmV4dHJhY3QgMiAwCmNvbmNhdApmcmFtZV9kaWcgMQpib3hfcHV0CmJ5dGVjXzEgLy8gIl8iCmZyYW1lX2RpZyAtMwpleHRyYWN0IDIgMApjb25jYXQKYm94X2dldApzdG9yZSA5CnN0b3JlIDgKbG9hZCA5CmFzc2VydApsb2FkIDgKZnJhbWVfYnVyeSAwCnJldHN1YgoKLy8gUmVnaXN0ZXJfdXNlcl9hc3NldApSZWdpc3RlcnVzZXJhc3NldF8zOgpwcm90byAzIDEKYnl0ZWNfMCAvLyAiIgpkdXAKaW50Y18wIC8vIDAKZHVwCmJ5dGVjXzAgLy8gIiIKZHVwCmJ5dGVjXzEgLy8gIl8iCmZyYW1lX2RpZyAtMwpleHRyYWN0IDIgMApjb25jYXQKYm94X2xlbgpzdG9yZSAxMQpzdG9yZSAxMApsb2FkIDExCmludGNfMCAvLyAwCj09CmJ6IFJlZ2lzdGVydXNlcmFzc2V0XzNfbDIKYnl0ZWMgNSAvLyAiIyIKZnJhbWVfZGlnIC0yCmV4dHJhY3QgMiAwCmNvbmNhdApib3hfbGVuCnN0b3JlIDEzCnN0b3JlIDEyCmxvYWQgMTMKaW50Y18wIC8vIDAKPT0KLy8gYXNzZXRfSUQgYWxyZWFkeSBleGlzdHMKYXNzZXJ0ClJlZ2lzdGVydXNlcmFzc2V0XzNfbDI6CmZyYW1lX2RpZyAtMwpmcmFtZV9idXJ5IDUKZnJhbWVfZGlnIDUKZnJhbWVfYnVyeSA0CnB1c2hpbnQgMTIgLy8gMTIKZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAyCmZyYW1lX2RpZyA1CmxlbgorCmZyYW1lX2J1cnkgMwpmcmFtZV9kaWcgMwppbnRjXzIgLy8gNjU1MzYKPAphc3NlcnQKZnJhbWVfZGlnIDIKaXRvYgpleHRyYWN0IDYgMApmcmFtZV9kaWcgLTIKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyA0CmZyYW1lX2RpZyA1CmNvbmNhdApmcmFtZV9idXJ5IDQKZnJhbWVfZGlnIDMKZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAyCml0b2IKZXh0cmFjdCA2IDAKY29uY2F0CmZyYW1lX2RpZyAtMQppdG9iCmNvbmNhdApmcmFtZV9kaWcgNApjb25jYXQKZnJhbWVfYnVyeSAxCmJ5dGVjIDUgLy8gIiMiCmZyYW1lX2RpZyAtMgpleHRyYWN0IDIgMApjb25jYXQKYm94X2RlbApwb3AKYnl0ZWMgNSAvLyAiIyIKZnJhbWVfZGlnIC0yCmV4dHJhY3QgMiAwCmNvbmNhdApmcmFtZV9kaWcgMQpib3hfcHV0CmJ5dGVjIDUgLy8gIiMiCmZyYW1lX2RpZyAtMgpleHRyYWN0IDIgMApjb25jYXQKYm94X2dldApzdG9yZSAxNQpzdG9yZSAxNApsb2FkIDE1CmFzc2VydApsb2FkIDE0CmZyYW1lX2J1cnkgMApyZXRzdWIKCi8vIHVwZGF0ZV9wcm9wb3NhbAp1cGRhdGVwcm9wb3NhbF80Ogpwcm90byA1IDEKYnl0ZWNfMCAvLyAiIgpkdXBuIDIKaW50Y18wIC8vIDAKZHVwCmJ5dGVjXzAgLy8gIiIKZHVwCmZyYW1lX2RpZyAtNQpleHRyYWN0IDIgMApib3hfZ2V0CnN0b3JlIDE3CnN0b3JlIDE2CmxvYWQgMTcKYXNzZXJ0CmxvYWQgMTYKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAtNQpmcmFtZV9idXJ5IDYKZnJhbWVfZGlnIDYKZnJhbWVfYnVyeSA1CmludGNfMyAvLyAyMgpmcmFtZV9idXJ5IDMKZnJhbWVfZGlnIDMKZnJhbWVfZGlnIDYKbGVuCisKZnJhbWVfYnVyeSA0CmZyYW1lX2RpZyA0CmludGNfMiAvLyA2NTUzNgo8CmFzc2VydApmcmFtZV9kaWcgMwppdG9iCmV4dHJhY3QgNiAwCmZyYW1lX2RpZyAtNApmcmFtZV9idXJ5IDYKZnJhbWVfZGlnIDUKZnJhbWVfZGlnIDYKY29uY2F0CmZyYW1lX2J1cnkgNQpmcmFtZV9kaWcgNApmcmFtZV9idXJ5IDMKZnJhbWVfZGlnIDMKZnJhbWVfZGlnIDYKbGVuCisKZnJhbWVfYnVyeSA0CmZyYW1lX2RpZyA0CmludGNfMiAvLyA2NTUzNgo8CmFzc2VydApmcmFtZV9kaWcgMwppdG9iCmV4dHJhY3QgNiAwCmNvbmNhdApmcmFtZV9kaWcgLTMKaXRvYgpjb25jYXQKZnJhbWVfZGlnIC0yCmZyYW1lX2J1cnkgNgpmcmFtZV9kaWcgNQpmcmFtZV9kaWcgNgpjb25jYXQKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyA0CmZyYW1lX2J1cnkgMwpmcmFtZV9kaWcgMwppdG9iCmV4dHJhY3QgNiAwCmNvbmNhdApmcmFtZV9kaWcgLTEKaXRvYgpjb25jYXQKZnJhbWVfZGlnIDUKY29uY2F0CmZyYW1lX2J1cnkgMgpmcmFtZV9kaWcgLTUKZXh0cmFjdCAyIDAKYm94X2RlbApwb3AKZnJhbWVfZGlnIC01CmV4dHJhY3QgMiAwCmZyYW1lX2RpZyAyCmJveF9wdXQKZnJhbWVfZGlnIC01CmV4dHJhY3QgMiAwCmJveF9nZXQKc3RvcmUgMTkKc3RvcmUgMTgKbG9hZCAxOQphc3NlcnQKbG9hZCAxOApmcmFtZV9idXJ5IDAKcmV0c3ViCgovLyBVcGRhdGVfVXNlcnMKVXBkYXRlVXNlcnNfNToKcHJvdG8gNCAxCmJ5dGVjXzAgLy8gIiIKZHVwbiAzCmludGNfMCAvLyAwCmR1cApieXRlY18wIC8vICIiCmR1cApmcmFtZV9kaWcgLTQKZXh0cmFjdCAyIDAKYm94X2dldApzdG9yZSAyMQpzdG9yZSAyMApsb2FkIDIxCmFzc2VydApsb2FkIDIwCmZyYW1lX2J1cnkgMwpieXRlY18xIC8vICJfIgpmcmFtZV9kaWcgLTMKZXh0cmFjdCAyIDAKY29uY2F0CmJveF9nZXQKc3RvcmUgMjMKc3RvcmUgMjIKbG9hZCAyMwphc3NlcnQKbG9hZCAyMgpmcmFtZV9idXJ5IDEKZnJhbWVfZGlnIC00CmZyYW1lX2J1cnkgNwpmcmFtZV9kaWcgNwpmcmFtZV9idXJ5IDYKcHVzaGludCAxNCAvLyAxNApmcmFtZV9idXJ5IDQKZnJhbWVfZGlnIDQKZnJhbWVfZGlnIDcKbGVuCisKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyA1CmludGNfMiAvLyA2NTUzNgo8CmFzc2VydApmcmFtZV9kaWcgNAppdG9iCmV4dHJhY3QgNiAwCmZyYW1lX2RpZyAtMwpmcmFtZV9idXJ5IDcKZnJhbWVfZGlnIDYKZnJhbWVfZGlnIDcKY29uY2F0CmZyYW1lX2J1cnkgNgpmcmFtZV9kaWcgNQpmcmFtZV9idXJ5IDQKZnJhbWVfZGlnIDQKZnJhbWVfZGlnIDcKbGVuCisKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyA1CmludGNfMiAvLyA2NTUzNgo8CmFzc2VydApmcmFtZV9kaWcgNAppdG9iCmV4dHJhY3QgNiAwCmNvbmNhdApmcmFtZV9kaWcgLTIKZnJhbWVfYnVyeSA3CmZyYW1lX2RpZyA2CmZyYW1lX2RpZyA3CmNvbmNhdApmcmFtZV9idXJ5IDYKZnJhbWVfZGlnIDUKZnJhbWVfYnVyeSA0CmZyYW1lX2RpZyA0Cml0b2IKZXh0cmFjdCA2IDAKY29uY2F0CmZyYW1lX2RpZyAtMQppdG9iCmNvbmNhdApmcmFtZV9kaWcgNgpjb25jYXQKZnJhbWVfYnVyeSAyCmJ5dGVjXzEgLy8gIl8iCmZyYW1lX2RpZyAtMwpleHRyYWN0IDIgMApjb25jYXQKYm94X2RlbApwb3AKYnl0ZWNfMSAvLyAiXyIKZnJhbWVfZGlnIC0zCmV4dHJhY3QgMiAwCmNvbmNhdApmcmFtZV9kaWcgMgpib3hfcHV0CmJ5dGVjXzEgLy8gIl8iCmZyYW1lX2RpZyAtMwpleHRyYWN0IDIgMApjb25jYXQKYm94X2dldApzdG9yZSAyNQpzdG9yZSAyNApsb2FkIDI1CmFzc2VydApsb2FkIDI0CmZyYW1lX2J1cnkgMApyZXRzdWIKCi8vIFZvdGluZ19SZWNvcmQKVm90aW5nUmVjb3JkXzY6CnByb3RvIDQgMQpieXRlY18wIC8vICIiCmR1cG4gMwppbnRjXzAgLy8gMApkdXAKYnl0ZWNfMCAvLyAiIgpkdXAKZnJhbWVfZGlnIC00CmV4dHJhY3QgMiAwCmJveF9nZXQKc3RvcmUgMjcKc3RvcmUgMjYKbG9hZCAyNwphc3NlcnQKbG9hZCAyNgpmcmFtZV9idXJ5IDEKYnl0ZWNfMSAvLyAiXyIKZnJhbWVfZGlnIC0zCmV4dHJhY3QgMiAwCmNvbmNhdApib3hfZ2V0CnN0b3JlIDI5CnN0b3JlIDI4CmxvYWQgMjkKYXNzZXJ0CmxvYWQgMjgKZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAtMwpmcmFtZV9idXJ5IDcKZnJhbWVfZGlnIDcKZnJhbWVfYnVyeSA2CnB1c2hpbnQgMTEgLy8gMTEKZnJhbWVfYnVyeSA0CmZyYW1lX2RpZyA0Cml0b2IKZXh0cmFjdCA2IDAKZnJhbWVfZGlnIC0yCml0b2IKY29uY2F0CnB1c2hieXRlcyAweDAwIC8vIDB4MDAKaW50Y18wIC8vIDAKZnJhbWVfZGlnIC0xCnNldGJpdApjb25jYXQKZnJhbWVfZGlnIDYKY29uY2F0CmZyYW1lX2J1cnkgMwpieXRlYyA2IC8vICJAIgpmcmFtZV9kaWcgLTMKZXh0cmFjdCAyIDAKY29uY2F0CmJveF9kZWwKcG9wCmJ5dGVjIDYgLy8gIkAiCmZyYW1lX2RpZyAtMwpleHRyYWN0IDIgMApjb25jYXQKZnJhbWVfZGlnIDMKYm94X3B1dApieXRlYyA2IC8vICJAIgpmcmFtZV9kaWcgLTMKZXh0cmFjdCAyIDAKY29uY2F0CmJveF9nZXQKc3RvcmUgMzEKc3RvcmUgMzAKbG9hZCAzMQphc3NlcnQKbG9hZCAzMApmcmFtZV9idXJ5IDAKZnJhbWVfZGlnIC0xCmludGNfMSAvLyAxCj09CmJueiBWb3RpbmdSZWNvcmRfNl9sMgpieXRlY18zIC8vICJOb19jb3VudCIKYnl0ZWNfMyAvLyAiTm9fY291bnQiCmFwcF9nbG9iYWxfZ2V0CmZyYW1lX2RpZyAtMgorCmFwcF9nbG9iYWxfcHV0CmIgVm90aW5nUmVjb3JkXzZfbDMKVm90aW5nUmVjb3JkXzZfbDI6CmJ5dGVjIDQgLy8gInllc19jb3VudCIKYnl0ZWMgNCAvLyAieWVzX2NvdW50IgphcHBfZ2xvYmFsX2dldApmcmFtZV9kaWcgLTIKKwphcHBfZ2xvYmFsX3B1dApWb3RpbmdSZWNvcmRfNl9sMzoKcmV0c3ViCgovLyBSZXN1bHQKUmVzdWx0Xzc6CnByb3RvIDEgMQpieXRlY18wIC8vICIiCmR1cApmcmFtZV9kaWcgLTEKZXh0cmFjdCAyIDAKYm94X2dldApzdG9yZSAzMwpzdG9yZSAzMgpsb2FkIDMzCmFzc2VydApsb2FkIDMyCmZyYW1lX2J1cnkgMQpieXRlYyA0IC8vICJ5ZXNfY291bnQiCmFwcF9nbG9iYWxfZ2V0CmJ5dGVjXzMgLy8gIk5vX2NvdW50IgphcHBfZ2xvYmFsX2dldAo+CmJueiBSZXN1bHRfN19sNApieXRlYyA0IC8vICJ5ZXNfY291bnQiCmFwcF9nbG9iYWxfZ2V0CmJ5dGVjXzMgLy8gIk5vX2NvdW50IgphcHBfZ2xvYmFsX2dldAo9PQpibnogUmVzdWx0XzdfbDMKcHVzaGJ5dGVzIDB4NmU2ZjIwNjk3MzIwNzc2OTZlNmU2NTcyMjAyMCAvLyAibm8gaXMgd2lubmVyICAiCmZyYW1lX2J1cnkgMApmcmFtZV9kaWcgMApsZW4KaXRvYgpleHRyYWN0IDYgMApmcmFtZV9kaWcgMApjb25jYXQKZnJhbWVfYnVyeSAwCmIgUmVzdWx0XzdfbDUKUmVzdWx0XzdfbDM6CnB1c2hieXRlcyAweDc0Njk2NTIwMjAgLy8gInRpZSAgIgpmcmFtZV9idXJ5IDAKZnJhbWVfZGlnIDAKbGVuCml0b2IKZXh0cmFjdCA2IDAKZnJhbWVfZGlnIDAKY29uY2F0CmZyYW1lX2J1cnkgMApiIFJlc3VsdF83X2w1ClJlc3VsdF83X2w0OgpwdXNoYnl0ZXMgMHg3OTY1NzMyMDY5NzMyMDc3Njk2ZTZlNjU3MjIwMjAgLy8gInllcyBpcyB3aW5uZXIgICIKZnJhbWVfYnVyeSAwCmZyYW1lX2RpZyAwCmxlbgppdG9iCmV4dHJhY3QgNiAwCmZyYW1lX2RpZyAwCmNvbmNhdApmcmFtZV9idXJ5IDAKUmVzdWx0XzdfbDU6CnJldHN1YgoKLy8gcmVhZF9wcm9wb3NhbF9zdG9yZQpyZWFkcHJvcG9zYWxzdG9yZV84Ogpwcm90byAxIDEKYnl0ZWNfMCAvLyAiIgpmcmFtZV9kaWcgLTEKZXh0cmFjdCAyIDAKYm94X2dldApzdG9yZSAzNQpzdG9yZSAzNApsb2FkIDM1CmFzc2VydApsb2FkIDM0CmZyYW1lX2J1cnkgMApyZXRzdWIKCi8vIHJlYWRfdXNlcl9wcm9wb3NhbF9zdG9yZQpyZWFkdXNlcnByb3Bvc2Fsc3RvcmVfOToKcHJvdG8gMiAxCmJ5dGVjXzAgLy8gIiIKZHVwCmZyYW1lX2RpZyAtMgpleHRyYWN0IDIgMApib3hfZ2V0CnN0b3JlIDM3CnN0b3JlIDM2CmxvYWQgMzcKYXNzZXJ0CmxvYWQgMzYKZnJhbWVfYnVyeSAxCmJ5dGVjXzEgLy8gIl8iCmZyYW1lX2RpZyAtMQpleHRyYWN0IDIgMApjb25jYXQKYm94X2dldApzdG9yZSAzOQpzdG9yZSAzOApsb2FkIDM5CmFzc2VydApsb2FkIDM4CmZyYW1lX2J1cnkgMApyZXRzdWIKCi8vIHJlYWRfdXNlcl9yZXNwb25zZQpyZWFkdXNlcnJlc3BvbnNlXzEwOgpwcm90byAxIDEKYnl0ZWNfMCAvLyAiIgpieXRlYyA2IC8vICJAIgpmcmFtZV9kaWcgLTEKZXh0cmFjdCAyIDAKY29uY2F0CmJveF9nZXQKc3RvcmUgNDEKc3RvcmUgNDAKbG9hZCA0MQphc3NlcnQKbG9hZCA0MApmcmFtZV9idXJ5IDAKcmV0c3ViCgovLyBSZWdpc3Rlcl9wcm9wb3NhbF9jYXN0ZXIKUmVnaXN0ZXJwcm9wb3NhbGNhc3Rlcl8xMToKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKZHVwbiAyCmludGNfMCAvLyAwCmJ5dGVjXzAgLy8gIiIKaW50Y18wIC8vIDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpmcmFtZV9idXJ5IDEKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgpmcmFtZV9idXJ5IDIKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMwpidG9pCmZyYW1lX2J1cnkgMwp0eG5hIEFwcGxpY2F0aW9uQXJncyA0CmZyYW1lX2J1cnkgNAp0eG5hIEFwcGxpY2F0aW9uQXJncyA1CmJ0b2kKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyAxCmZyYW1lX2RpZyAyCmZyYW1lX2RpZyAzCmZyYW1lX2RpZyA0CmZyYW1lX2RpZyA1CmNhbGxzdWIgUmVnaXN0ZXJwcm9wb3NhbF8xCmZyYW1lX2J1cnkgMApieXRlY18yIC8vIDB4MTUxZjdjNzUKZnJhbWVfZGlnIDAKY29uY2F0CmxvZwpyZXRzdWIKCi8vIFJlZ2lzdHJlZF91c2VyX3Blcl9wcm9wb3NhbF9jYXN0ZXIKUmVnaXN0cmVkdXNlcnBlcnByb3Bvc2FsY2FzdGVyXzEyOgpwcm90byAwIDAKYnl0ZWNfMCAvLyAiIgpkdXBuIDMKaW50Y18wIC8vIDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpmcmFtZV9idXJ5IDEKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgpmcmFtZV9idXJ5IDIKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMwpmcmFtZV9idXJ5IDMKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgNApidG9pCmZyYW1lX2J1cnkgNApmcmFtZV9kaWcgMQpmcmFtZV9kaWcgMgpmcmFtZV9kaWcgMwpmcmFtZV9kaWcgNApjYWxsc3ViIFJlZ2lzdHJlZHVzZXJwZXJwcm9wb3NhbF8yCmZyYW1lX2J1cnkgMApieXRlY18yIC8vIDB4MTUxZjdjNzUKZnJhbWVfZGlnIDAKY29uY2F0CmxvZwpyZXRzdWIKCi8vIFJlZ2lzdGVyX3VzZXJfYXNzZXRfY2FzdGVyClJlZ2lzdGVydXNlcmFzc2V0Y2FzdGVyXzEzOgpwcm90byAwIDAKYnl0ZWNfMCAvLyAiIgpkdXBuIDIKaW50Y18wIC8vIDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpmcmFtZV9idXJ5IDEKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgpmcmFtZV9idXJ5IDIKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMwpidG9pCmZyYW1lX2J1cnkgMwpmcmFtZV9kaWcgMQpmcmFtZV9kaWcgMgpmcmFtZV9kaWcgMwpjYWxsc3ViIFJlZ2lzdGVydXNlcmFzc2V0XzMKZnJhbWVfYnVyeSAwCmJ5dGVjXzIgLy8gMHgxNTFmN2M3NQpmcmFtZV9kaWcgMApjb25jYXQKbG9nCnJldHN1YgoKLy8gdXBkYXRlX3Byb3Bvc2FsX2Nhc3Rlcgp1cGRhdGVwcm9wb3NhbGNhc3Rlcl8xNDoKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKZHVwbiAyCmludGNfMCAvLyAwCmJ5dGVjXzAgLy8gIiIKaW50Y18wIC8vIDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpmcmFtZV9idXJ5IDEKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgpmcmFtZV9idXJ5IDIKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMwpidG9pCmZyYW1lX2J1cnkgMwp0eG5hIEFwcGxpY2F0aW9uQXJncyA0CmZyYW1lX2J1cnkgNAp0eG5hIEFwcGxpY2F0aW9uQXJncyA1CmJ0b2kKZnJhbWVfYnVyeSA1CmZyYW1lX2RpZyAxCmZyYW1lX2RpZyAyCmZyYW1lX2RpZyAzCmZyYW1lX2RpZyA0CmZyYW1lX2RpZyA1CmNhbGxzdWIgdXBkYXRlcHJvcG9zYWxfNApmcmFtZV9idXJ5IDAKYnl0ZWNfMiAvLyAweDE1MWY3Yzc1CmZyYW1lX2RpZyAwCmNvbmNhdApsb2cKcmV0c3ViCgovLyBVcGRhdGVfVXNlcnNfY2FzdGVyClVwZGF0ZVVzZXJzY2FzdGVyXzE1Ogpwcm90byAwIDAKYnl0ZWNfMCAvLyAiIgpkdXBuIDMKaW50Y18wIC8vIDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpmcmFtZV9idXJ5IDEKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgpmcmFtZV9idXJ5IDIKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMwpmcmFtZV9idXJ5IDMKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgNApidG9pCmZyYW1lX2J1cnkgNApmcmFtZV9kaWcgMQpmcmFtZV9kaWcgMgpmcmFtZV9kaWcgMwpmcmFtZV9kaWcgNApjYWxsc3ViIFVwZGF0ZVVzZXJzXzUKZnJhbWVfYnVyeSAwCmJ5dGVjXzIgLy8gMHgxNTFmN2M3NQpmcmFtZV9kaWcgMApjb25jYXQKbG9nCnJldHN1YgoKLy8gVm90aW5nX1JlY29yZF9jYXN0ZXIKVm90aW5nUmVjb3JkY2FzdGVyXzE2Ogpwcm90byAwIDAKYnl0ZWNfMCAvLyAiIgpkdXBuIDIKaW50Y18wIC8vIDAKZHVwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAxCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKZnJhbWVfYnVyeSAyCnR4bmEgQXBwbGljYXRpb25BcmdzIDMKYnRvaQpmcmFtZV9idXJ5IDMKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgNAppbnRjXzAgLy8gMApwdXNoaW50IDggLy8gOAoqCmdldGJpdApmcmFtZV9idXJ5IDQKZnJhbWVfZGlnIDEKZnJhbWVfZGlnIDIKZnJhbWVfZGlnIDMKZnJhbWVfZGlnIDQKY2FsbHN1YiBWb3RpbmdSZWNvcmRfNgpmcmFtZV9idXJ5IDAKYnl0ZWNfMiAvLyAweDE1MWY3Yzc1CmZyYW1lX2RpZyAwCmNvbmNhdApsb2cKcmV0c3ViCgovLyBSZXN1bHRfY2FzdGVyClJlc3VsdGNhc3Rlcl8xNzoKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKZHVwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAxCmNhbGxzdWIgUmVzdWx0XzcKZnJhbWVfYnVyeSAwCmJ5dGVjXzIgLy8gMHgxNTFmN2M3NQpmcmFtZV9kaWcgMApjb25jYXQKbG9nCnJldHN1YgoKLy8gcmVhZF9wcm9wb3NhbF9zdG9yZV9jYXN0ZXIKcmVhZHByb3Bvc2Fsc3RvcmVjYXN0ZXJfMTg6CnByb3RvIDAgMApieXRlY18wIC8vICIiCmR1cAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmZyYW1lX2J1cnkgMQpmcmFtZV9kaWcgMQpjYWxsc3ViIHJlYWRwcm9wb3NhbHN0b3JlXzgKZnJhbWVfYnVyeSAwCmJ5dGVjXzIgLy8gMHgxNTFmN2M3NQpmcmFtZV9kaWcgMApjb25jYXQKbG9nCnJldHN1YgoKLy8gcmVhZF91c2VyX3Byb3Bvc2FsX3N0b3JlX2Nhc3RlcgpyZWFkdXNlcnByb3Bvc2Fsc3RvcmVjYXN0ZXJfMTk6CnByb3RvIDAgMApieXRlY18wIC8vICIiCmR1cG4gMgp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmZyYW1lX2J1cnkgMQp0eG5hIEFwcGxpY2F0aW9uQXJncyAyCmZyYW1lX2J1cnkgMgpmcmFtZV9kaWcgMQpmcmFtZV9kaWcgMgpjYWxsc3ViIHJlYWR1c2VycHJvcG9zYWxzdG9yZV85CmZyYW1lX2J1cnkgMApieXRlY18yIC8vIDB4MTUxZjdjNzUKZnJhbWVfZGlnIDAKY29uY2F0CmxvZwpyZXRzdWIKCi8vIHJlYWRfdXNlcl9yZXNwb25zZV9jYXN0ZXIKcmVhZHVzZXJyZXNwb25zZWNhc3Rlcl8yMDoKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKZHVwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAxCmZyYW1lX2RpZyAxCmNhbGxzdWIgcmVhZHVzZXJyZXNwb25zZV8xMApmcmFtZV9idXJ5IDAKYnl0ZWNfMiAvLyAweDE1MWY3Yzc1CmZyYW1lX2RpZyAwCmNvbmNhdApsb2cKcmV0c3Vi",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 0,
+            "num_uints": 2
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {
+                "No_count": {
+                    "type": "uint64",
+                    "key": "No_count",
+                    "descr": "variable to store user response"
+                },
+                "yes_count": {
+                    "type": "uint64",
+                    "key": "yes_count",
+                    "descr": "variable to store user response"
+                }
+            },
+            "reserved": {}
+        },
+        "local": {
+            "declared": {},
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "Voting_Contract_Ctrl_Alt",
+        "methods": [
+            {
+                "name": "Register_proposal",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "proposal_name"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "asset_count"
+                    },
+                    {
+                        "type": "string",
+                        "name": "asset_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "Amount"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,string,uint64,string,uint64)"
+                }
+            },
+            {
+                "name": "Registred_user_per_proposal",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "user_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "asset_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "token_count"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,string,string,uint64)"
+                }
+            },
+            {
+                "name": "Register_user_asset",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "user_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "asset_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "token_count"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,string,uint64)"
+                }
+            },
+            {
+                "name": "update_proposal",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "proposal_name"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "asset_count"
+                    },
+                    {
+                        "type": "string",
+                        "name": "asset_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "Amount"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,string,uint64,string,uint64)"
+                }
+            },
+            {
+                "name": "Update_Users",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "user_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "asset_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "token_count"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,string,string,uint64)"
+                }
+            },
+            {
+                "name": "Voting_Record",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "user_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "token_count"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "user_response"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,uint64,bool)"
+                }
+            },
+            {
+                "name": "Result",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    }
+                ],
+                "returns": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "read_proposal_store",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,string,uint64,string,uint64)"
+                }
+            },
+            {
+                "name": "read_user_proposal_store",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "proposal_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "user_id"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,string,string,uint64)"
+                }
+            },
+            {
+                "name": "read_user_response",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "user_id"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,uint64,bool)"
+                }
+            }
+        ],
+        "networks": {}
+    },
+    "bare_call_config": {
+        "no_op": "CREATE"
+    }
+}

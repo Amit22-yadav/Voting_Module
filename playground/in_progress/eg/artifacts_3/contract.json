@@ -1,0 +1,178 @@
+{
+    "name": "Voting_Proposal_EX_res",
+    "methods": [
+        {
+            "name": "Register_proposal",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                },
+                {
+                    "type": "string",
+                    "name": "proposal_name"
+                },
+                {
+                    "type": "uint64",
+                    "name": "asset_count"
+                },
+                {
+                    "type": "uint64",
+                    "name": "asset_id"
+                },
+                {
+                    "type": "uint64",
+                    "name": "Amount"
+                }
+            ],
+            "returns": {
+                "type": "(string,string,uint64,uint64,uint64)"
+            }
+        },
+        {
+            "name": "Registred_user_per_proposal",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                },
+                {
+                    "type": "string",
+                    "name": "user_id"
+                },
+                {
+                    "type": "uint64",
+                    "name": "token_count"
+                }
+            ],
+            "returns": {
+                "type": "(string,string,uint64)"
+            }
+        },
+        {
+            "name": "update_proposal",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                },
+                {
+                    "type": "string",
+                    "name": "proposal_name"
+                },
+                {
+                    "type": "uint64",
+                    "name": "asset_count"
+                },
+                {
+                    "type": "uint64",
+                    "name": "asset_id"
+                },
+                {
+                    "type": "uint64",
+                    "name": "Amount"
+                }
+            ],
+            "returns": {
+                "type": "(string,string,uint64,uint64,uint64)"
+            }
+        },
+        {
+            "name": "Update_Users",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                },
+                {
+                    "type": "string",
+                    "name": "user_id"
+                },
+                {
+                    "type": "uint64",
+                    "name": "token_count"
+                }
+            ],
+            "returns": {
+                "type": "(string,string,uint64)"
+            }
+        },
+        {
+            "name": "Voting_Record",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                },
+                {
+                    "type": "string",
+                    "name": "user_id"
+                },
+                {
+                    "type": "uint64",
+                    "name": "token_count"
+                },
+                {
+                    "type": "bool",
+                    "name": "user_response"
+                }
+            ],
+            "returns": {
+                "type": "(string,uint64,bool)"
+            }
+        },
+        {
+            "name": "Result",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "read_proposal_store",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                }
+            ],
+            "returns": {
+                "type": "(string,string,uint64,uint64,uint64)"
+            }
+        },
+        {
+            "name": "read_user_proposal_store",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "proposal_id"
+                },
+                {
+                    "type": "string",
+                    "name": "user_id"
+                }
+            ],
+            "returns": {
+                "type": "(string,string,uint64)"
+            }
+        },
+        {
+            "name": "read_user_response",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "user_id"
+                }
+            ],
+            "returns": {
+                "type": "(string,uint64,bool)"
+            }
+        }
+    ],
+    "networks": {}
+}
